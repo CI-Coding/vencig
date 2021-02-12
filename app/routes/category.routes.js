@@ -4,10 +4,10 @@ module.exports = (app) => {
     const category = require('../controllers/category.controller.js');
 
     // Create a new Category
-    app.post('/category', category.create);
+    app.post('/postaddress', category.create);
 
     // Retrieve all Categorys
-    app.get('/category', category.findAll);
+    app.get('/getaddress', category.findAll);
 
     // Retrieve a single Category with categoryId
     app.get('/category/:categoryId', category.findOne);
