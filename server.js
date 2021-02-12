@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 require('./app/routes/category.routes.js')(app);
 
 // listen for requests
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
     console.log("Node JS Server running on port 3000");
 });
+// process.env.PORT
