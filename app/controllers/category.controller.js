@@ -79,7 +79,7 @@ exports.delete = (req, res) => {
    });
 };
 exports.create = async(req, res) => {
-    console.log(req.body);
+   
 	if(!req.body.address) {
         return res.status(400).send({
             message: "Fields can not be empty"
@@ -94,12 +94,14 @@ exports.create = async(req, res) => {
     if (address) {
         address.rewards = req.body.rewards
         address.save().then(()=> { return res.sendStatus(200)})
+        console.log(req.body);
      } else {
         // Create a Category
         const category = new Category({
             address: req.body.address, 
             rewards: req.body.rewards
         });
+        console.log(req);
 
         // Save Category in the database
     category.save()
