@@ -79,6 +79,7 @@ exports.delete = (req, res) => {
    });
 };
 exports.create = async(req, res) => {
+    console.log(req.body);
 	if(!req.body.address) {
         return res.status(400).send({
             message: "Fields can not be empty"
