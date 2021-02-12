@@ -4,6 +4,8 @@ const dbConfig = require('./config/database.config.js');
 var cors = require('cors');
 
 const app = express();
+
+// for cors remove
 app.use(cors())
 
 // parse requests of content-type - application/x-www-form-urlencoded
