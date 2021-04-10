@@ -7,7 +7,7 @@ module.exports = (app) => {
     app.post('/category', category.create);
 
     // Retrieve all Categorys
-    app.get('/category', category.findAll);
+    app.get('/categorys', category.findAll);
 
     // Retrieve a single Category with categoryId
     app.get('/category/:categoryId', category.findOne);
