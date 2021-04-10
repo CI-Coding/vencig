@@ -22,7 +22,12 @@ app.get('/', (req, res) => {
 require('./app/routes/category.routes.js')(app);
 
 // listen for requests
-app.listen(3000, () => {
-    console.log("Node JS Server running on port 3000");
-});
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
+  
+// app.listen(3000, () => {
+//     console.log("Node JS Server running on port 3000");
+// });
 // process.env.PORT
