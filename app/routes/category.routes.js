@@ -15,6 +15,6 @@ module.exports = (app) => {
     // Update a Category with categoryId
     app.put('/category/:categoryId', category.update);
 
-    
+    // Delete a Category with categoryId
     app.delete('/category/:categoryId', category.delete);
 }
